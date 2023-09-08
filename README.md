@@ -41,9 +41,9 @@ format: [section_name], section_name is a string
 123=i"456
 ```
 # sub section
-format: [section_name.sub_section_name], section_name and sub_section_name are strings
+format: [section_name'sub_section_name], section_name and sub_section_name are strings
 
 ```
-[section_name.sub_section_name]
+[section_name'sub_section_name]
 123=i"456
 ```

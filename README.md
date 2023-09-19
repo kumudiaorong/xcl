@@ -16,7 +16,7 @@ example:
 
 # symbol
 
-`format` : `(s|b|i[8|16|32|64]|u[8|16|32|64]|f[32|64])'value`
+`format` : `(s|b|i|u|f)'value`
 
 - `s` : string
 - `b` : bool
@@ -32,8 +32,8 @@ example:
 ```
 s'hello world
 b'true
-i8'1
-u8'1
+i'1
+u'1
 f32'1.0
 ```
 

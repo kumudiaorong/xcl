@@ -3,8 +3,7 @@
 config language
 
 # comment
-
-- all comment start with `#`
+* all comment start with `#`
 
 `format` : `# comment content`
 
@@ -18,14 +17,11 @@ example:
 
 `format` : `(s|b|i|u|f)'value`
 
-- `s` : string
-- `b` : bool
-- `i` : int
-- `u` : uint
-- `f` : float
-
-`tips` 
-- string can omit `s'`
+* `s` : string
+* `b` : bool
+* `i` : int
+* `u` : uint
+* `f` : float
 
 example:
 
@@ -41,8 +37,8 @@ f32'1.0
 
 `format` : `key = value`
 
-- `key` : symbol but only string
-- `value` : symbol
+* `key` : symbol but only string
+* `value` : symbol
 
 example:
 
@@ -55,10 +51,11 @@ _hello = s'world
 
 `format` : `[section]`
 
-- `section` : string
+* `section` : string
 
-`rules`
-- `section` can't be empty
+ `rules`
+
+* `section` can't be empty
 
 example:
 
@@ -70,14 +67,45 @@ example:
 
 `format` : `[section'sub-section]`
 
-- `section` : string
-- `sub-section` : string
+* `section` : string
+* `sub-section` : string
 
-`rules` 
-- `section` and `sub-section` can't be empty
+ `rules`
+
+* `section` and `sub-section` can't be empty
 
 example:
 
 ```
 [hello'world]
 ```
+
+# array
+
+`format` : 
+```
+`key = (s|b|i|u|f)‘[
+  value, 
+  value,
+  value
+]`
+```
+* `key` : symbol but only string
+
+ `rules`
+
+* `key` can't be empty
+
+example:
+
+```
+hello = s[
+    world,
+    world,
+    world
+]
+```
+
+# section array
+
+`format`:`[section][arrayname]`
